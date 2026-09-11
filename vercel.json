@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build:full",
+  "buildCommand": "npm run product:facts && cross-env-shell VITE_VARIANT=full \"tsc && vite build\"",
   "ignoreCommand": "bash scripts/vercel-ignore.sh",
   "crons": [],
   "redirects": [
