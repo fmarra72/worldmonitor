@@ -282,15 +282,10 @@
       "host": "agentskills.io",
       "provider": "agentskills.io",
       "kind": "structured",
-      "observed": true,
+      "observed": false,
       "license": "Provider terms for this upstream API/dataset; verify before redistribution",
       "attribution": "Credit agentskills.io and link to the original upstream API/dataset.",
-      "status": "terms-review",
-      "references": [
-        {
-          "path": "api/skills/fetch-agentskills.ts"
-        }
-      ]
+      "status": "excluded"
     },
     {
       "host": "agsi.gie.eu",
@@ -573,9 +568,6 @@
       "attribution": "Excluded from the provider count: identity-control-plane request.",
       "status": "excluded",
       "references": [
-        {
-          "path": "api/user/passkey-offer.ts"
-        },
         {
           "path": "server/auth-session.ts"
         }
@@ -1369,12 +1361,6 @@
       "attribution": "Excluded from the external-provider count: first-party API endpoint.",
       "status": "excluded",
       "references": [
-        {
-          "path": "api/a2a.ts"
-        },
-        {
-          "path": "api/internal/mcp-grant-mint.ts"
-        },
         {
           "path": "api/mcp/downstream.ts"
         },
@@ -2370,9 +2356,6 @@
           "path": "api/_notification-webhook-ssrf.ts"
         },
         {
-          "path": "api/mcp-proxy.ts"
-        },
-        {
           "path": "server/_shared/email-validation.ts"
         },
         {
@@ -3123,18 +3106,10 @@
       "host": "discord.com",
       "provider": "discord.com",
       "kind": "structured",
-      "observed": true,
+      "observed": false,
       "license": "Excluded: first-party, control-plane, UI, or rendering transport",
       "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
-      "status": "excluded",
-      "references": [
-        {
-          "path": "api/discord/oauth/callback.ts"
-        },
-        {
-          "path": "api/discord/oauth/start.ts"
-        }
-      ]
+      "status": "excluded"
     },
     {
       "host": "discord.gg",
@@ -4260,9 +4235,6 @@
       "status": "terms-review",
       "references": [
         {
-          "path": "api/symbol-search.ts"
-        },
-        {
           "path": "scripts/ais-relay.cjs"
         },
         {
@@ -4562,9 +4534,6 @@
       "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
       "status": "excluded",
       "references": [
-        {
-          "path": "api/download.js"
-        },
         {
           "path": "scripts/build-accuracy-page.mjs"
         },
@@ -5138,15 +5107,10 @@
       "host": "internal.example.com",
       "provider": "Internal example placeholder",
       "kind": "structured",
-      "observed": true,
+      "observed": false,
       "license": "Excluded: documentation/test placeholder",
       "attribution": "Excluded from the provider count: placeholder URL.",
-      "status": "excluded",
-      "references": [
-        {
-          "path": "api/notification-channels.ts"
-        }
-      ]
+      "status": "excluded"
     },
     {
       "host": "investing.com",
@@ -5729,9 +5693,6 @@
       "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
       "status": "excluded",
       "references": [
-        {
-          "path": "api/product-catalog.js"
-        },
         {
           "path": "scripts/ais-relay.cjs"
         }
@@ -6577,9 +6538,6 @@
       "status": "terms-review",
       "references": [
         {
-          "path": "api/reverse-geocode.js"
-        },
-        {
           "path": "server/worldmonitor/infrastructure/v1/reverse-geocode.ts"
         }
       ]
@@ -7291,9 +7249,6 @@
       "status": "excluded",
       "references": [
         {
-          "path": "api/widget-agent.ts"
-        },
-        {
           "path": "scripts/seed-security-advisories.mjs"
         },
         {
@@ -7998,9 +7953,6 @@
       "status": "terms-review",
       "references": [
         {
-          "path": "api/ask.ts"
-        },
-        {
           "path": "scripts/build-accuracy-page.mjs"
         },
         {
@@ -8396,18 +8348,10 @@
       "host": "slack.com",
       "provider": "slack.com",
       "kind": "structured",
-      "observed": true,
+      "observed": false,
       "license": "Excluded: first-party, control-plane, UI, or rendering transport",
       "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
-      "status": "excluded",
-      "references": [
-        {
-          "path": "api/slack/oauth/callback.ts"
-        },
-        {
-          "path": "api/slack/oauth/start.ts"
-        }
-      ]
+      "status": "excluded"
     },
     {
       "host": "slidstvo.info",
@@ -8791,9 +8735,6 @@
       "status": "excluded",
       "references": [
         {
-          "path": "api/telegram-feed.js"
-        },
-        {
           "path": "scripts/ais-relay.cjs"
         },
         {
@@ -9048,9 +8989,6 @@
       "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
       "status": "excluded",
       "references": [
-        {
-          "path": "api/product-catalog.js"
-        },
         {
           "path": "scripts/ais-relay.cjs"
         }
@@ -10100,15 +10038,10 @@
       "host": "workos.com",
       "provider": "workos.com",
       "kind": "structured",
-      "observed": true,
+      "observed": false,
       "license": "Excluded: first-party, control-plane, UI, or rendering transport",
       "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
-      "status": "excluded",
-      "references": [
-        {
-          "path": "api/oauth-authorization-server.ts"
-        }
-      ]
+      "status": "excluded"
     },
     {
       "host": "worldmonitor.app",
@@ -10123,34 +10056,7 @@
           "path": "api/_agent-metadata.ts"
         },
         {
-          "path": "api/a2a.ts"
-        },
-        {
-          "path": "api/ask.ts"
-        },
-        {
-          "path": "api/fwdstart.js"
-        },
-        {
           "path": "api/mcp/skill-extension/generated.ts"
-        },
-        {
-          "path": "api/oauth/authorize.js"
-        },
-        {
-          "path": "api/og-story.js"
-        },
-        {
-          "path": "api/opensky.js"
-        },
-        {
-          "path": "api/referral/me.ts"
-        },
-        {
-          "path": "api/reverse-geocode.js"
-        },
-        {
-          "path": "api/story.js"
         },
         {
           "path": "scripts/_upstash-rest.mjs"
@@ -10276,9 +10182,6 @@
       "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
       "status": "excluded",
       "references": [
-        {
-          "path": "api/docs-mcp.ts"
-        },
         {
           "path": "src/config/docs-locale-seo.ts"
         }
@@ -11704,15 +11607,10 @@
       "host": "www.fwdstart.me",
       "provider": "www.fwdstart.me",
       "kind": "structured",
-      "observed": true,
+      "observed": false,
       "license": "Provider terms for this upstream API/dataset; verify before redistribution",
       "attribution": "Credit www.fwdstart.me and link to the original upstream API/dataset.",
-      "status": "terms-review",
-      "references": [
-        {
-          "path": "api/fwdstart.js"
-        }
-      ]
+      "status": "excluded"
     },
     {
       "host": "www.g4media.ro",
@@ -14070,9 +13968,6 @@
       "status": "excluded",
       "references": [
         {
-          "path": "api/fwdstart.js"
-        },
-        {
           "path": "src/embed/panels/fear-greed.ts"
         }
       ]
@@ -14246,16 +14141,7 @@
           "path": "api/_cors.js"
         },
         {
-          "path": "api/a2a.ts"
-        },
-        {
-          "path": "api/ask.ts"
-        },
-        {
           "path": "api/mcp/skill-extension/generated.ts"
-        },
-        {
-          "path": "api/not-found.ts"
         },
         {
           "path": "scripts/build-accuracy-page.mjs"
@@ -14423,12 +14309,6 @@
       "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
       "status": "excluded",
       "references": [
-        {
-          "path": "api/youtube/embed.js"
-        },
-        {
-          "path": "api/youtube/live.js"
-        },
         {
           "path": "scripts/ais-relay.cjs"
         },
