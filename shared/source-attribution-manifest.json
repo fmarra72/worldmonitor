@@ -14144,6 +14144,9 @@
           "path": "api/mcp/skill-extension/generated.ts"
         },
         {
+          "path": "api/not-found.ts"
+        },
+        {
           "path": "scripts/build-accuracy-page.mjs"
         },
         {
