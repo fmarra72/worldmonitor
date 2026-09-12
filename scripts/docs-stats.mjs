@@ -1186,9 +1186,22 @@ function computeStats({ sourceAttribution: suppliedAttribution } = {}) {
     mcpAppLinkedTools: mcpApps.linkedTools,
     bootstrapCache: parseBootstrapCacheContract(),
     // Counts only — see parseHealthProbedKeys on why the key names stay out.
-    healthProbedKeys: (({ bootstrap, standalone, total }) => ({ bootstrap, standalone, total }))(
-      parseHealthProbedKeys(),
-    ),
+    //
+    // api/health.js is intentionally excluded from this deployment (kept out
+    // of Vercel's Serverless Functions count — see .vercelignore, mirrors the
+    // api/mcp/ treatment above). Its probed-key counts feed no validated
+    // capability (buildInventoryFacts's capabilities object never reads
+    // healthProbedKeys), so a missing file degrades to zero counts instead
+    // of failing every caller of computeStats().
+    healthProbedKeys: (() => {
+      try {
+        const { bootstrap, standalone, total } = parseHealthProbedKeys();
+        return { bootstrap, standalone, total };
+      } catch (error) {
+        if (error?.code !== 'ENOENT') throw error;
+        return { bootstrap: 0, standalone: 0, total: 0 };
+      }
+    })(),
   };
 }
 
