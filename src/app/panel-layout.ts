@@ -1300,7 +1300,7 @@ export class PanelLayoutManager implements AppModule {
             <span class="site-footer-sub">v${__APP_VERSION__} &middot; <a href="https://x.com/eliehabib" target="_blank" rel="noopener" class="site-footer-credit">@eliehabib</a></span>
           </div>
         </div>
-        <nav aria-label="World Monitor references">
+        <nav aria-label="GEOVIX references">
           ${referenceLinksHtml}
           <a href="${referenceOrigin}/pro#pricing" target="_blank" rel="noopener">Pricing</a>
           <a href="https://www.worldmonitor.app/blog/" target="_blank" rel="noopener">Blog</a>
@@ -1312,7 +1312,7 @@ export class PanelLayoutManager implements AppModule {
           <a href="https://x.com/worldmonitorai" target="_blank" rel="noopener">X</a>
           ${this.ctx.isDesktopApp ? '' : `<span id="footerDownloadMount"></span>`}
         </nav>
-        <span class="site-footer-copy">&copy; ${new Date().getFullYear()} World Monitor</span>
+        <span class="site-footer-copy">&copy; ${new Date().getFullYear()} GEOVIX</span>
       </footer>
     `, "legacy direct innerHTML migration"));
     // Mark AFTER the innerHTML swap so the timestamp reflects when the new shell
