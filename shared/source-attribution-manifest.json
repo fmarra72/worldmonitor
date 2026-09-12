@@ -14118,6 +14118,9 @@
           "path": "api/_cors.js"
         },
         {
+          "path": "api/not-found.ts"
+        },
+        {
           "path": "scripts/build-accuracy-page.mjs"
         },
         {
