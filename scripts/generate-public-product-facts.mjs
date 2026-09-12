@@ -328,7 +328,7 @@ const proLocalePaths = readdirSync(join(ROOT, 'pro-test/src/locales'))
   .sort();
 
 for (const [path, groups] of applicationJsonLdGroups) {
- stransform(path, (source) => rewriteApplicationJsonLd(source, groups));
+  transform(path, (source) => rewriteApplicationJsonLd(source, groups));
 }
 
 // Keep the hand-authored A2A routing copy's catalog total derived from the
@@ -394,6 +394,10 @@ function replacePreviousPrices(source) {
     const oldText = priceText(previous.price);
     const nextText = priceText(plan.price);
     result = result.replaceAll(`$${oldText}`, `$${nextText}`);
+    // Comma-variant rewrite only when the old price actually HAD a decimal
+    // point: for integer prices the "comma form" is identical to the dot
+    // form, and running it after the line above re-matches the freshly
+    // written replacement's prefix ("$449.99" -> "$449,99.99").
     if (oldText.includes('.')) {
       result = result.replaceAll(
         `$${oldText.replace('.', ',')}`,
@@ -423,6 +427,7 @@ for (const path of new Set([
 
 function pricingSummary() {
   const byKey = Object.fromEntries(plans.map((plan) => [plan.planKey, plan]));
+  /** Catalog-derived dashboard-AI copy. `null` in the catalog means unlimited. */
   const dashboardAi = (planKey) => {
     const limit = byKey[planKey]?.dashboardAiCallsPerDay;
     if (limit === null) return 'unlimited dashboard-AI requests';
