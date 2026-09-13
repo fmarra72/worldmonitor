@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <title>Tesouro dos EUA & SPR — GEOVIX</title>
+    <style>
+      *{box-sizing:border-box;margin:0;padding:0}
+      body{font-family:ui-monospace,'SF Mono','Cascadia Code','JetBrains Mono',monospace;background:#0a0a0a;color:#e8e8e8;min-height:100vh;padding:1.5rem}
+      .wrap{max-width:920px;margin:0 auto}
+      header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:.75rem}
+      .logo{font-weight:700;letter-spacing:.05em;color:#2d8a6e}
+      nav a{color:#666;text-decoration:none;font-size:.8rem;margin-left:1rem}
+      nav a:hover{color:#e8e8e8}
+      h1{font-size:1.3rem;margin-bottom:.25rem}
+      .subtitle{color:#666;font-size:.85rem;margin-bottom:2rem}
+      section{background:#111;border:1px solid #1e1e1e;padding:1.5rem;margin-bottom:1.5rem}
+      h2{font-size:1rem;color:#fff;margin-bottom:.25rem}
+      .source{color:#444;font-size:.7rem;margin-bottom:1.25rem}
+      .source a{color:#555}
+      .summary-row{display:flex;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap}
+      .summary-card{background:#0a0a0a;border:1px solid #1e1e1e;padding:.9rem 1.2rem;flex:1;min-width:160px}
+      .summary-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:#555;margin-bottom:.3rem}
+      .summary-value{font-size:1.2rem;font-weight:600;color:#fff}
+      .summary-value.pos{color:#2ca02c}
+      .summary-value.neg{color:#d62728}
+      .bar-row{display:flex;align-items:center;gap:.6rem;padding:.35rem 0;font-size:.8rem}
+      .bar-country{width:150px;flex-shrink:0;color:#ccc;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+      .bar-track{flex:1;height:16px;background:#1a1a1a;position:relative;display:flex;align-items:center}
+      .bar-fill{height:100%;position:absolute;top:0}
+      .bar-fill.pos{background:#2ca02c;left:50%}
+      .bar-fill.neg{background:#d62728;right:50%}
+      .bar-center{position:absolute;left:50%;top:0;bottom:0;width:1px;background:#333}
+      .bar-value{width:90px;flex-shrink:0;text-align:right;color:#999;font-size:.75rem}
+      .bar-holdings{width:70px;flex-shrink:0;text-align:right;color:#555;font-size:.7rem}
+      .legend{display:flex;gap:1.5rem;font-size:.7rem;color:#666;margin-bottom:1rem}
+      .legend span{display:inline-flex;align-items:center;gap:.35rem}
+      .dot{width:8px;height:8px;border-radius:50%}
+      .dot.pos{background:#2ca02c}
+      .dot.neg{background:#d62728}
+      .loading,.error{color:#555;font-size:.85rem;padding:2rem 0;text-align:center}
+      .error{color:#d62728}
+      footer{text-align:center;font-size:.7rem;color:#333;margin-top:2rem}
+      footer a{color:#444;text-decoration:none}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <span class="logo">GEOVIX</span>
+        <nav>
+          <a href="/dashboard">Dashboard</a>
+          <a href="https://github.com/koala73/worldmonitor" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+      </header>
+      <h1>Tesouro dos EUA &amp; Reserva Estratégica de Petróleo</h1>
+      <p class="subtitle">Quem está comprando e vendendo dívida americana, e o nível da SPR — dados públicos, ao vivo.</p>
+
+      <section id="treasury-section">
+        <h2>Fluxo líquido de Treasuries — maiores credores (12 meses)</h2>
+        <p class="source">Fonte: <a href="https://ticdata.treasury.gov/" target="_blank" rel="noopener">U.S. Treasury / TIC</a> — Major Foreign Holders of Treasury Securities. Mede onde o título está custodiado, não necessariamente a nacionalidade do dono final.</p>
+        <div id="treasury-content" class="loading">Carregando dados do Tesouro...</div>
+      </section>
+
+      <section id="spr-section">
+        <h2>Reserva Estratégica de Petróleo (SPR)</h2>
+        <p class="source">Fonte: <a href="https://www.eia.gov/petroleum/data.php" target="_blank" rel="noopener">EIA — U.S. Energy Information Administration</a>.</p>
+        <div id="spr-content" class="loading">Carregando dados da SPR...</div>
+      </section>
+
+      <footer>
+        GEOVIX &middot; <a href="/dashboard">voltar ao dashboard</a>
+      </footer>
+    </div>
+    <script type="module" src="/src/treasury-flow-main.ts"></script>
+  </body>
+</html>
