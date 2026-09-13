@@ -189,7 +189,7 @@ export function buildHumanNotFoundHtml(path?: string): string {
     '  <meta charset="UTF-8">',
     '  <meta name="viewport" content="width=device-width, initial-scale=1.0">',
     '  <meta name="robots" content="noindex">',
-    '  <title>Page not found — World Monitor</title>',
+    '  <title>Page not found — GEOVIX</title>',
     '  <style>',
     '    body { background: #0a0f0a; color: #e0e0e0; font-family: system-ui;',
     '           display: flex; align-items: center; justify-content: center;',
