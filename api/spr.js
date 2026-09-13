@@ -3,7 +3,7 @@
 // (already configured in this project's environment variables).
 // Series: WCSSTUS1 — "U.S. Ending Stocks of Crude Oil in SPR (Thousand
 // Barrels)". Ported from the RISCO Monitor Macro (WW3) Python pipeline.
-export const config = { runtime: 'edge' };
+export const config = { runtime: 'edge' }; // env refresh
 
 const EIA_SERIES = 'WCSSTUS1';
 
