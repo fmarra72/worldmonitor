@@ -167,7 +167,7 @@ export function buildAgentNotFoundMarkdown(path: string): string {
   return [
     '# Not found',
     '',
-    `\`${safePath}\` is not a page on World Monitor.`,
+    `\`${safePath}\` is not a page on GEOVIX.`,
     '',
     'Use these indexes instead of guessing URLs:',
     '',
@@ -180,8 +180,8 @@ export function buildAgentNotFoundMarkdown(path: string): string {
 
 export function buildHumanNotFoundHtml(path?: string): string {
   const pathLine = path
-    ? `<p><code>${sanitizePathForHtml(path)}</code> is not a page on World Monitor.</p>`
-    : '<p>This path is not a page on World Monitor.</p>';
+    ? `<p><code>${sanitizePathForHtml(path)}</code> is not a page on GEOVIX.</p>`
+    : '<p>This path is not a page on GEOVIX.</p>';
   return [
     '<!DOCTYPE html>',
     '<html lang="en">',
