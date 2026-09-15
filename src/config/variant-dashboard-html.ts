@@ -31,7 +31,7 @@ export function renderVariantNoscriptMainHtml(variant: VariantSeoKey, meta: Vari
   return `<main id="dashboard-noscript" class="dashboard-noscript">
         <h2>${escHtml(meta.siteName)} requires JavaScript for the live map</h2>
         ${about}
-        <p>Visit the <a href="${CANONICAL_ORIGIN}">World Monitor homepage</a> for the platform overview, or use the indexable reference pages below without enabling JavaScript.</p>
+        <p>Visit the <a href="${CANONICAL_ORIGIN}">GEOVIX homepage</a> for the platform overview, or use the indexable reference pages below without enabling JavaScript.</p>
         <nav aria-label="${escHtml(meta.siteName)} references">
           <ul>
             <li><a href="${CANONICAL_ORIGIN}countries/">Country intelligence</a></li>
@@ -140,7 +140,7 @@ function variantBreadcrumbJsonLd(meta: VariantMeta): string {
       {
         '@type': 'ListItem',
         position: 1,
-        name: 'World Monitor',
+        name: 'GEOVIX',
         item: CANONICAL_ORIGIN,
       },
       {
