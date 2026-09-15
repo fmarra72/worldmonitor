@@ -47,6 +47,13 @@ export const SITE_VARIANT: string = (() => {
   if (h.startsWith('happy.')) return 'happy';
   if (h.startsWith('commodity.')) return 'commodity';
   if (h.startsWith('energy.')) return 'energy';
+  // Own-domain variant pages (dashboard-tech.html etc.) are served without a
+  // matching subdomain, since real tech.<owndomain> etc. don't exist yet.
+  // Detect the variant from the filename in that case, so the built-in
+  // subdomain detection above stays untouched for when they do.
+  const path = window.location?.pathname ?? '';
+  const pathMatch = /\/dashboard-(tech|finance|happy|commodity|energy)(?:\.html)?(?:$|[/?#])/.exec(path);
+  if (pathMatch && isSiteVariant(pathMatch[1])) return pathMatch[1] as SiteVariant;
 
   if (h === 'localhost' || h === '127.0.0.1') {
     const stored = loadStoredVariant();
