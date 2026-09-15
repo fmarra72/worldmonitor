@@ -47,6 +47,7 @@ export const SITE_VARIANT: string = (() => {
   if (h.startsWith('happy.')) return 'happy';
   if (h.startsWith('commodity.')) return 'commodity';
   if (h.startsWith('energy.')) return 'energy';
+
   // Own-domain variant pages (dashboard-tech.html etc.) are served without a
   // matching subdomain, since real tech.<owndomain> etc. don't exist yet.
   // Detect the variant from the filename in that case, so the built-in
