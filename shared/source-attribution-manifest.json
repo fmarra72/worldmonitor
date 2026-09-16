@@ -2500,15 +2500,10 @@
       "host": "commodity.worldmonitor.app",
       "provider": "commodity.worldmonitor.app",
       "kind": "structured",
-      "observed": true,
+      "observed": false,
       "license": "Excluded: first-party, control-plane, UI, or rendering transport",
       "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
-      "status": "excluded",
-      "references": [
-        {
-          "path": "src/app/panel-layout.ts"
-        }
-      ]
+      "status": "excluded"
     },
     {
       "host": "comtradeapi.un.org",
@@ -3534,15 +3529,10 @@
       "host": "energy.worldmonitor.app",
       "provider": "energy.worldmonitor.app",
       "kind": "structured",
-      "observed": true,
+      "observed": false,
       "license": "Excluded: first-party, control-plane, UI, or rendering transport",
       "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
-      "status": "excluded",
-      "references": [
-        {
-          "path": "src/app/panel-layout.ts"
-        }
-      ]
+      "status": "excluded"
     },
     {
       "host": "eng.lsm.lv",
@@ -4160,15 +4150,10 @@
       "host": "finance.worldmonitor.app",
       "provider": "finance.worldmonitor.app",
       "kind": "structured",
-      "observed": true,
+      "observed": false,
       "license": "Excluded: first-party, control-plane, UI, or rendering transport",
       "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
-      "status": "excluded",
-      "references": [
-        {
-          "path": "src/app/panel-layout.ts"
-        }
-      ]
+      "status": "excluded"
     },
     {
       "host": "finance.yahoo.com",
@@ -4488,6 +4473,9 @@
       "attribution": "Credit geovix-monitor.vercel.app and link to the original upstream API/dataset.",
       "status": "terms-review",
       "references": [
+        {
+          "path": "src/app/panel-layout.ts"
+        },
         {
           "path": "src/config/variant-meta.ts"
         }
@@ -8854,15 +8842,10 @@
       "host": "tech.worldmonitor.app",
       "provider": "tech.worldmonitor.app",
       "kind": "structured",
-      "observed": true,
+      "observed": false,
       "license": "Excluded: first-party, control-plane, UI, or rendering transport",
       "attribution": "Excluded from the external-provider count: not an ingested upstream dataset.",
-      "status": "excluded",
-      "references": [
-        {
-          "path": "src/app/panel-layout.ts"
-        }
-      ]
+      "status": "excluded"
     },
     {
       "host": "techcabal.com",
