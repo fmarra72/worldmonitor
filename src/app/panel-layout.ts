@@ -235,11 +235,11 @@ const DASHBOARD_REFERENCE_LINKS = [
 
 export const VARIANT_SWITCHER_DASHBOARD_URLS = {
   full: 'https://www.worldmonitor.app/dashboard',
-  tech: 'https://tech.worldmonitor.app/dashboard',
-  finance: 'https://finance.worldmonitor.app/dashboard',
-  commodity: 'https://commodity.worldmonitor.app/dashboard',
-  energy: 'https://energy.worldmonitor.app/dashboard',
-  happy: 'https://happy.worldmonitor.app/dashboard',
+    tech: 'https://geovix-monitor.vercel.app/dashboard-tech.html',
+    finance: 'https://geovix-monitor.vercel.app/dashboard-finance.html',
+    commodity: 'https://geovix-monitor.vercel.app/dashboard-commodity.html',
+    energy: 'https://geovix-monitor.vercel.app/dashboard-energy.html',
+    happy: 'https://geovix-monitor.vercel.app/dashboard-happy.html',
 } as const;
 
 export function variantSwitcherHref(
