@@ -1228,7 +1228,9 @@ export function getEffectivePanelConfig(key: string, variant: string): PanelConf
   const base = getVariantPanelConfigs(variant)?.[key] ?? ALL_PANELS[key];
   if (!base) return { name: key, enabled: false, priority: 2 };
   const override = VARIANT_PANEL_OVERRIDES[variant]?.[key] ?? {};
-  return { ...base, ...override };
+  // Geovix: no paid tier — strip any premium flag so no panel shows a PRO
+  // badge or gets treated as premium anywhere downstream.
+  return { ...base, ...override, premium: undefined };
 }
 
 /**
