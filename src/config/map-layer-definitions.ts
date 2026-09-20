@@ -51,10 +51,11 @@ const def = (
   i18nSuffix: string,
   fallbackLabel: string,
   renderers: RendererKind[] = ['svg', 'deck', 'globe'],
-  premium?: 'locked' | 'enhanced',
+  _premium?: 'locked' | 'enhanced',
 ): LayerDefinition => ({
+  // Geovix: no paid tier — the premium arg is accepted (call sites still
+  // pass it) but never applied, so no layer shows a PRO badge or lock icon.
   key, icon, i18nSuffix, fallbackLabel, renderers,
-  ...(premium && { premium }),
 });
 
 export const LAYER_REGISTRY: Record<keyof MapLayers, LayerDefinition> = {
