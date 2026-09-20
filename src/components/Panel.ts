@@ -5,7 +5,7 @@ import { type DomChild, h, replaceChildren, safeHtml as sanitizeHtmlFragment, se
 import { safeHtmlToString, type SafeHtml } from '@/utils/sanitize';
 import { trackPanelResized } from '@/services/analytics';
 import { getAiFlowSettings } from '@/services/ai-flow-settings';
-import { getSecretState } from '@/services/runtime-config';
+
 import { PanelGateReason } from '@/services/panel-gating';
 import { lockSvg, upgradeSvg } from '@/components/gate-icons';
 import { createCheckoutConsentElement } from '@/utils/legal-links';
@@ -259,10 +259,7 @@ export class Panel {
       headerLeft.appendChild(this.newBadgeEl);
     }
 
-    if (options.premium && !getSecretState('WORLDMONITOR_API_KEY').present) {
-      const proBadge = h('span', { className: 'panel-pro-badge' }, t('premium.pro'));
-      headerLeft.appendChild(proBadge);
-    }
+// Geovix: no paid tier — panel-level PRO badge removed entirely.
 
     this.header.appendChild(headerLeft);
 
